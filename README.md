@@ -60,7 +60,7 @@ var out = invert( obj, {
 
 ## Notes
 
-*	Insertion order is not guaranteed, as `object` keys are unsorted according to the ECMAScript specification. In practice, however, most engines use insertion order to sort an `object`'s keys, thus allowing for deterministic inversion.
+*	Insertion order is not guaranteed, as `object` key enumeration is not specified according to the [ECMAScript specification](http://www.ecma-international.org/ecma-262/5.1/#sec-12.6.4). In practice, however, most engines use insertion order to sort an `object`'s keys, thus allowing for deterministic inversion.
 *	Beware when providing `objects` having values which are themselves `objects`. This implementation relies on native `object` serialization (`#toString`) when converting values to keys.
 	
 	``` javascript
@@ -79,12 +79,12 @@ var out = invert( obj, {
 ``` javascript
 var invert = require( 'utils-object-inverse' );
 
-// Create an array of random integers...
 var arr = new Array( 1000 ),
 	len = arr.length,
 	out,
 	i;
 
+// Create an array of random integers...
 for ( i = 0; i < len; i++ ) {
 	arr[ i ] = Math.round( Math.random()*100 );
 }

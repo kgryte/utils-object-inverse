@@ -2,13 +2,13 @@
 
 var invert = require( './../lib' );
 
-// Create an array of random integers...
 var arr = new Array( 1000 ),
 	len = arr.length,
 	keys,
 	out,
 	i;
 
+// Create an array of random integers...
 for ( i = 0; i < len; i++ ) {
 	arr[ i ] = Math.round( Math.random()*100 );
 }

@@ -44,7 +44,7 @@ var out = invert({
 // returns {'beep':['a','b']}
 ```
 
-To __not__ allow duplicates, set the `duplicates` option to `false`. The output `key`-`value` pair will be `key` most recently inserted into the input `object`.
+To __not__ allow duplicates, set the `duplicates` option to `false`. The output `key-value` pair will be the `key` most recently inserted into the input `object`.
 
 ``` javascript
 var obj = {};
